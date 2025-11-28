@@ -1,3 +1,4 @@
+from utils import validate_number, get_operation_symbol
 def add(a, b):
     """Сложение двух чисел"""
     return a + b
@@ -17,8 +18,8 @@ def main():
     print("🎯 Добро пожаловать в калькулятор!")
  
     try:
-        num1 = float(input("Введите первое число: "))
-        num2 = float(input("Введите второе число: "))
+        num1 = validate_number(input("Введите первое число: "))
+        num2 = validate_number(input("Введите второе число: "))
         operation = input("Выберите операцию (+, -, *, /): ")
  
         if operation == '+':
